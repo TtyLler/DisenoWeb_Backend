@@ -2,15 +2,17 @@
   "name": "disenoweb_backend",
   "version": "1.0.0",
   "description": "API para un proyecto basado en la administración de una serie de restaurantes gourmet",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon node ./src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "2.8.5",
+    "dotenv": "16.3.1",
     "express": "4.18.2",
     "mongoose": "7.3.2",
     "morgan": "1.10.0"
