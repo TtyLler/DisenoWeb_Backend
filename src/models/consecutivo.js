@@ -3,26 +3,26 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 //create a new mongoose schema
-const RestauranteSchema = new Schema({
-    CodigoRestaurante: {
+const ConsecutivoSchema = new Schema({
+    CodigoConsecutivo: {
       type: Number
     },
-    NombreRestaurante: {
+    DescripcionConsecutivo: {
       type: String
     },
-    DireccionRestaurante: {
+    PrefijoConsecutivo: {
       type: String
     },
-    CantidadClientes: {
+    TipoConsecutivo: {
       type: Number
     },
-    Telefono: {
-      type: String
+    ValorConsecutivo: {
+      type: Number
     }
 })
 
 //setting an option for the schema to specify how the document should be transformed when converted to JSON.
-RestauranteSchema.set('toJSON',{
+ConsecutivoSchema.set('toJSON',{
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
@@ -30,4 +30,4 @@ RestauranteSchema.set('toJSON',{
   }
 })
 
-export default RestauranteSchema;
+export default ConsecutivoSchema;
