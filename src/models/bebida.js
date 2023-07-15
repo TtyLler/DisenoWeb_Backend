@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+//create a new mongoose schema
 const BebidaSchema = new Schema({
     CodigoBebida: {
       type: Number
@@ -29,6 +30,7 @@ const BebidaSchema = new Schema({
     },
 })
 
+//setting an option for the schema to specify how the document should be transformed when converted to JSON.
 BebidaSchema.set('toJSON',{
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id

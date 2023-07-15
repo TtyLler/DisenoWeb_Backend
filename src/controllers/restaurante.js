@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
 import RestauranteSchema from '../models/restaurante.js'
 
+//allows you to perform CRUD operations on the specific collection of the database using the corresponding schema
 const Restaurant = mongoose.model('restaurantes', RestauranteSchema)
 
+//retrieves all data and sends it as a JSON response
 export const getRestaurant = async (req, res) => {
   try{
       const data = await Restaurant.find();
@@ -12,7 +14,7 @@ export const getRestaurant = async (req, res) => {
       res.status(500).json({message: error.message})
   }
 }
-
+//retrieves data by its ID and sends the data as a JSON
 export const getOneRestaurant = async (req, res) => {
   try{
       const data = await Restaurant.findById(req.params.id);
@@ -22,7 +24,7 @@ export const getOneRestaurant = async (req, res) => {
       res.status(500).json({message: error.message})
   }
 }
-
+//creates a new record in a database using the data provide in the request body.
 export const createRestaurant = async (req, res) => {
   const data = new Restaurant({
       CodigoRestaurante: req.body.CodigoRestaurante,
@@ -39,7 +41,7 @@ export const createRestaurant = async (req, res) => {
       res.status(400).json({message: error.message})
   }
 }
-
+//updates the document in a database using the provided request parameters and body data.
 export const updateRestaurant = async (req, res) => {
   try {
       const { id } = req.params;
@@ -55,7 +57,7 @@ export const updateRestaurant = async (req, res) => {
       res.status(400).json({ message: error.message })
   }
 }
-
+//deletes a document from the database and sends a response with the name of the deleted document.
 export const deleteRestaurant = async (req, res) => {
   try {
       const { id } = req.params;

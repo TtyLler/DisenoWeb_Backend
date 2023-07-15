@@ -1,13 +1,13 @@
 import mongoose from 'mongoose';
-import BebidaSchema from '../models/bebida.js'
+import ConsecutivoSchema from '../models/consecutivo.js'
 
 //allows you to perform CRUD operations on the specific collection of the database using the corresponding schema
-const Bebida = mongoose.model('bebidas', BebidaSchema)
+const Consecutivo = mongoose.model('consecutivos', ConsecutivoSchema)
 
 //retrieves all data and sends it as a JSON response
-export const getBebida= async (req, res) => {
+export const getConsecutivo= async (req, res) => {
   try{
-      const data = await Bebida.find();
+      const data = await Consecutivo.find();
       res.json(data)
   }
   catch(error){
@@ -15,9 +15,9 @@ export const getBebida= async (req, res) => {
   }
 }
 //retrieves data by its ID and sends the data as a JSON
-export const getOneBebida = async (req, res) => {
+export const getOneConsecutivo = async (req, res) => {
   try{
-      const data = await Bebida.findById(req.params.id);
+      const data = await Consecutivo.findById(req.params.id);
       res.json(data)
   }
   catch(error){
@@ -25,16 +25,13 @@ export const getOneBebida = async (req, res) => {
   }
 }
 //creates a new record in a database using the data provide in the request body.
-export const createBebida = async (req, res) => {
-  const data = new Bebida({
-      CodigoBebida: req.body.CodigoBebida,
-      TipoBebida: req.body.TipoBebida,
-      Marca: req.body.Marca,
-      Precio: req.body.Precio,
-      CodigoRestaurante: req.body.CodigoRestaurante,
-      Pais: req.body.Pais,
-      CodigoMedida: req.body.CodigoMedida,
-      Ano: req.body.Ano
+export const createConsecutivo = async (req, res) => {
+  const data = new Consecutivo({
+    CodigoConsecutivo: req.body.CodigoConsecutivo,
+    DescripcionConsecutivo: req.body.DescripcionConsecutivo,
+    PrefijoConsecutivo: req.body.PrefijoConsecutivo,
+    TipoConsecutivo: req.body.TipoConsecutivo,
+    ValorConsecutivo: req.body.ValorConsecutivo
   })
   try {
       const dataToSave = await data.save();
@@ -45,13 +42,13 @@ export const createBebida = async (req, res) => {
   }
 }
 //updates the document in a database using the provided request parameters and body data.
-export const updateBebida = async (req, res) => {
+export const updateConsecutivo = async (req, res) => {
   try {
       const { id } = req.params;
       const updatedData = req.body;
       const options = { new: true };
 
-      const result = await Bebida.findByIdAndUpdate(
+      const result = await Consecutivo.findByIdAndUpdate(
           id, updatedData, options
       )
       res.send(result)
@@ -61,11 +58,11 @@ export const updateBebida = async (req, res) => {
   }
 }
 //deletes a document from the database and sends a response with the name of the deleted document.
-export const deleteBebida= async (req, res) => {
+export const deleteConsecutivo = async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Bebida.findByIdAndDelete(id)
-      res.send(`Beverage "${data.Marca}" has been deleted`)
+      const data = await Consecutivo.findByIdAndDelete(id)
+      res.send(`Consecutivo "${data.PrefijoConsecutivo}" has been deleted`)
   }
   catch (error) {
       res.status(400).json({ message: error.message })

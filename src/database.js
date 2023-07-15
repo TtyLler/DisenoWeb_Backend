@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
 import 'dotenv/config'
 
+//define the database connection string
 const DB_CONNECTION = process.env.CLOUD_DB
 
+//connects to a MongoDB database using the provided connection string
 async function connect() {
   try {
     await mongoose.connect(DB_CONNECTION, {
@@ -15,6 +17,7 @@ async function connect() {
   }
 }
 
+//returns the connection object of the mongoose database.
 function getDatabase() {
   return mongoose.connection;
 }
