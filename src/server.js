@@ -5,6 +5,8 @@ import { connect } from './database.js';
 import restaurante from './routes/restaurante.js'
 import bebida from './routes/bebida.js'
 import consecutivo from './routes/consecutivo.js'
+import equipo from './routes/equipo.js'
+import tecnologia from './routes/tecnologia.js'
 
 //define the port of the server
 const PORT = process.env.PORT || 5000
@@ -23,6 +25,8 @@ connect()
 app.use(restaurante)
 app.use(bebida)
 app.use(consecutivo)
+app.use(equipo)
+app.use(tecnologia)
 
 //starting the Node.js server and listening for incoming requests on the specified port
 app.listen(PORT,() => {
