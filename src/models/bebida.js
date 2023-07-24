@@ -2,39 +2,25 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const BebidaSchema = new Schema({
-    CodigoBebida: {
-      type: Number
-    },
-    TipoBebida: {
-      type: String
-    },
-    Marca: {
-      type: String
-    },
-    Precio: {
-      type: Number
-    },
-    CodigoRestaurante: {
-      type: Number
-    },
-    Pais: {
-      type: String
-    },
-    CodigoMedida: {
-      type: Number
-    },
-    Ano: {
-      type: Number
-    },
+const ClienteSchema = new Schema({
+CodigoCliente: {
+type: Number
+  },
+NombreCliente: {
+type: String
+  },
+MontoPagadoCliente: {
+type: Number
+  },
+
 })
 
-BebidaSchema.set('toJSON',{
-  transform: (document, returnedObject) => {
-    returnedObject.id = returnedObject._id
-    delete returnedObject._id
-    delete returnedObject.__v
-  }
+ClienteSchema.set('toJSON',{
+ transform: (document, returnedObject) => {
+  returnedObject.id = returnedObject._id
+  delete returnedObject._id
+  delete returnedObject.__v
+ }
 })
 
-export default BebidaSchema;
+export default ClienteSchema;
