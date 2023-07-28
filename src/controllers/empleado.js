@@ -30,7 +30,7 @@ export const createEmpleado = async (req, res) => {
       CodigoUsuario: req.body.CodigoUsuario,
       CodigoRestaurante: req.body.CodigoRestaurante,
       Cedula: req.body.Cedula,
-      Telefonos: req.body.Telefonos
+      Telefono: req.body.Telefono
   })
   try {
       const dataToSave = await data.save();
