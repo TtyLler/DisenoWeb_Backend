@@ -56,8 +56,8 @@ export const updateRol = async (req, res) => {
 export const deleteRol= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Rol.findByIdAndDelete(id)
-      res.send(`Rol "${data.Marca}" has been deleted`)
+      await Rol.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

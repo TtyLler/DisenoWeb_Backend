@@ -59,8 +59,8 @@ export const updateMesa = async (req, res) => {
 export const deleteMesa= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Mesa.findByIdAndDelete(id)
-      res.send(`Mesa "${data.Marca}" has been deleted`)
+      await Mesa.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

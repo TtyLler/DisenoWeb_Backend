@@ -61,8 +61,8 @@ export const updateConsecutivo = async (req, res) => {
 export const deleteConsecutivo = async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Consecutivo.findByIdAndDelete(id)
-      res.send(`Consecutivo "${data.PrefijoConsecutivo}" has been deleted`)
+      await Consecutivo.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

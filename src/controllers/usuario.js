@@ -57,8 +57,8 @@ export const updateUsuario = async (req, res) => {
 export const deleteUsuario= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Usuario.findByIdAndDelete(id)
-      res.send(`Usuario "${data.Marca}" has been deleted`)
+      await Usuario.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

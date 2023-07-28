@@ -59,8 +59,8 @@ export const updateComestible = async (req, res) => {
 export const deleteComestible= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Comestible.findByIdAndDelete(id)
-      res.send(`Comestible "${data.Marca}" has been deleted`)
+      await Comestible.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

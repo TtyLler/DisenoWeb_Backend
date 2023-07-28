@@ -64,8 +64,8 @@ export const updateBebida = async (req, res) => {
 export const deleteBebida= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Bebida.findByIdAndDelete(id)
-      res.send(`Beverage "${data.Marca}" has been deleted`)
+      await Bebida.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

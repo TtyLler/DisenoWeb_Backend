@@ -56,8 +56,8 @@ export const updateEspecial = async (req, res) => {
 export const deleteEspecial= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Especial.findByIdAndDelete(id)
-      res.send(`Especial "${data.Marca}" has been deleted`)
+      await Especial.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

@@ -61,8 +61,8 @@ export const updateRestaurant = async (req, res) => {
 export const deleteRestaurant = async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Restaurant.findByIdAndDelete(id)
-      res.send(`Restaurant "${data.NombreRestaurante}" has been deleted`)
+      await Restaurant.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

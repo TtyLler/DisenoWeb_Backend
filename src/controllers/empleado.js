@@ -60,8 +60,8 @@ export const updateEmpleado = async (req, res) => {
 export const deleteEmpleado= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Empleado.findByIdAndDelete(id)
-      res.send(`Empleado "${data.Marca}" has been deleted`)
+      await Empleado.findByIdAndDelete(id)
+      res.json({msg: 'Empleado has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })
