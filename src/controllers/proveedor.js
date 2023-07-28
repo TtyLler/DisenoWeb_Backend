@@ -60,8 +60,8 @@ export const updateProveedor = async (req, res) => {
 export const deleteProveedor= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Proveedor.findByIdAndDelete(id)
-      res.send(`Proveedor "${data.Marca}" has been deleted`)
+      await Proveedor.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

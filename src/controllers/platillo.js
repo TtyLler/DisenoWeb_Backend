@@ -61,8 +61,8 @@ export const updatePlatillo = async (req, res) => {
 export const deletePlatillo= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Platillo.findByIdAndDelete(id)
-      res.send(`Platillo "${data.Marca}" has been deleted`)
+      await Platillo.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

@@ -57,8 +57,8 @@ export const updateCliente = async (req, res) => {
 export const deleteCliente= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Cliente.findByIdAndDelete(id)
-      res.send(`Cliente "${data.Marca}" has been deleted`)
+      await Cliente.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })

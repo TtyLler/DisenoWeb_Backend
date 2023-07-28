@@ -58,8 +58,8 @@ export const updateLimpieza = async (req, res) => {
 export const deleteLimpieza= async (req, res) => {
   try {
       const { id } = req.params;
-      const data = await Limpieza.findByIdAndDelete(id)
-      res.send(`Limpieza "${data.Marca}" has been deleted`)
+      await Limpieza.findByIdAndDelete(id)
+      res.json({msg: 'Entry has been Deleted'})
   }
   catch (error) {
       res.status(400).json({ message: error.message })
