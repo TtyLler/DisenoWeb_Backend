@@ -18,7 +18,7 @@ const EmpleadoSchema = new Schema({
   Cedula: {
     type: String,
   },
-  Telefonos: {
+  Telefono: {
     type: String,
   },
 })
