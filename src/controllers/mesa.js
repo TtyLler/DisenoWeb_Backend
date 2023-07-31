@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import MesaSchema from '../models/bebida.js'
+import MesaSchema from '../models/mesa.js'
 
 const Mesa = mongoose.model('mesas', MesaSchema)
 
