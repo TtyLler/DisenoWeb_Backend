@@ -3,21 +3,26 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const EspecialSchema = new Schema({
-CodigoEspecial: {
-type: Number
+  CodigoEspecial: {
+    type: Number,
   },
-DescripcionEspecial: {
-type: String
+  NombreEspecial: {
+    type: String,
   },
-
+  DescripcionEspecial: {
+    type: String,
+  },
+  Precio: {
+    type: Number,
+  },
 })
 
-EspecialSchema.set('toJSON',{
- transform: (document, returnedObject) => {
-  returnedObject.id = returnedObject._id
-  delete returnedObject._id
-  delete returnedObject.__v
- }
+EspecialSchema.set('toJSON', {
+  transform: (document, returnedObject) => {
+    returnedObject.id = returnedObject._id
+    delete returnedObject._id
+    delete returnedObject.__v
+  },
 })
 
-export default EspecialSchema;
+export default EspecialSchema

@@ -26,7 +26,9 @@ export const getOneEspecial = async (req, res) => {
 export const createEspecial = async (req, res) => {
   const data = new Especial({
       CodigoEspecial: req.body.CodigoEspecial,
-      DescripcionEspecial: req.body.DescripcionEspecial
+      NombreEspecial: req.body.NombreEspecial,
+      DescripcionEspecial: req.body.DescripcionEspecial,
+      Precio: req.body.Precio
   })
   try {
       const dataToSave = await data.save();
