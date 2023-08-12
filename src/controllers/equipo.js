@@ -29,9 +29,8 @@ export const createEquipo = async (req, res) => {
   const data = new Equipos({
       CodigoEquipo: req.body.CodigoEquipo,
       NombreEquipo: req.body.NombreEquipo,
-      DescripcionEquipo: req.body.DescripcionEquipo,
       Cantidad: req.body.Cantidad,
-      CodigoProveedor: req.body.CodigoProveedor,
+      Precio: req.body.Precio,
       CodigoRestaurante: req.body.CodigoRestaurante
   })
   try {
