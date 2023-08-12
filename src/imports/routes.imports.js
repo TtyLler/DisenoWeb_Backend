@@ -21,6 +21,8 @@ import proveedor from '../routes/proveedor.js';
 import rol from '../routes/rol.js';
 import transaccion from '../routes/transaccion.js';
 import usuario from '../routes/usuario.js';
+import signup from '../routes/signup.js'
+import signin from '../routes/signin.js'
 
 // Export all the routes in a single array
 export default [
@@ -46,4 +48,6 @@ export default [
   rol,
   transaccion,
   usuario,
+  signup,
+  signin
 ];

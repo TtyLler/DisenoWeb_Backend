@@ -10,13 +10,10 @@ const EquipoSchema = new Schema({
     NombreEquipo: {
       type: String
     },
-    DescripcionEquipo: {
-      type: String
-    },
     Cantidad: {
       type: Number
     },
-    CodigoProveedor: {
+    Precio: {
       type: Number
     },
     CodigoRestaurante: {

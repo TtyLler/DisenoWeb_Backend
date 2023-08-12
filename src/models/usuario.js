@@ -12,6 +12,9 @@ const UsuarioSchema = new Schema({
   Contrasena: {
     type: String
   },
+  Rol: {
+    type: String
+  }
 })
 
 UsuarioSchema.set('toJSON', {

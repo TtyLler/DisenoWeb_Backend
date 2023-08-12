@@ -28,6 +28,7 @@ export const createUsuario = async (req, res) => {
     CodigoUsuario: lastUsuario[0]['CodigoUsuario'] + 1,
     NombreUsuario: req.body.NombreUsuario,
     Contrasena: req.body.Contrasena,
+    Rol: req.body.Rol
   })
   try {
     const dataToSave = await data.save()
