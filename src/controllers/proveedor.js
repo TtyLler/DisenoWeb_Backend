@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import ProveedorSchema from '../models/proveedor.js'
 
-const Proveedor = mongoose.model('proveedores', ProveedorSchema)
+const Proveedor = mongoose.model('proveedors', ProveedorSchema)
 
 export const getProveedor= async (req, res) => {
   try{
