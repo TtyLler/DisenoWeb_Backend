@@ -3,10 +3,10 @@ import { getProveedor, getOneProveedor, createProveedor, updateProveedor, delete
 
 const router = Router();
 
-router.get('/proveedores', getProveedor)
-router.get('/proveedores/:id', getOneProveedor)
-router.post('/proveedores', createProveedor)
-router.put('/proveedores/:id',updateProveedor)
-router.delete('/proveedores/:id', deleteProveedor)
+router.get('/proveedor', getProveedor)
+router.get('/proveedor/:id', getOneProveedor)
+router.post('/proveedor', createProveedor)
+router.put('/proveedor/:id',updateProveedor)
+router.delete('/proveedor/:id', deleteProveedor)
 
 export default router;

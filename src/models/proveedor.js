@@ -3,21 +3,21 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const ProveedorSchema = new Schema({
-CodigoProveedor: {
+CodigoProv: {
 type: Number
  },
-NombreProveedor: {
+NombreProv: {
 type: String
  },
-CodigoActivo: {
+ApellidoProv: {
+type: String
+ },
+TelefonoProv: {
 type: Number
  },
-CodigoPais: {
-type: Number
- },
-Telefono: {
-type: Number
- },
+ CelularProv: {
+    type: Number
+     },
 })
 
 ProveedorSchema.set('toJSON',{

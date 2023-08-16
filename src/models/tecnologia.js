@@ -4,23 +4,23 @@ const Schema = mongoose.Schema
 
 //create a new mongoose schema
 const TecnologiaSchema = new Schema({
-    CodigoTecnologia: {
+    CodigoTec: {
       type: Number
     },
-    NombreTecnologia: {
+    RestauranteTec: {
+      type: Number
+    },
+    NombreTec: {
       type: String
     },
-    CodigoRestaurante: {
-      type: Number
-    },
-    CodigoMarca: {
-      type: Number
-    },
-    DescripcionTecnologia: {
+    MarcaTec: {
       type: String
     },
-    CodigoProveedor: {
+    CantidadTec: {
       type: Number
+    },
+    DescripcionTec: {
+      type: String
     }
 })
 
