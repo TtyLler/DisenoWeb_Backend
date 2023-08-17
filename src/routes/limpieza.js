@@ -3,10 +3,10 @@ import { getLimpieza, getOneLimpieza, createLimpieza, updateLimpieza, deleteLimp
 
 const router = Router();
 
-router.get('/tecnologias', getLimpieza)
-router.get('/tecnologias/:id', getOneLimpieza)
-router.post('/tecnologias', createLimpieza)
-router.put('/tecnologias/:id',updateLimpieza)
-router.delete('/tecnologias/:id', deleteLimpieza)
+router.get('/limpieza', getLimpieza)
+router.get('/limpieza/:id', getOneLimpieza)
+router.post('/limpieza', createLimpieza)
+router.put('/limpieza/:id',updateLimpieza)
+router.delete('/limpieza/:id', deleteLimpieza)
 
 export default router;

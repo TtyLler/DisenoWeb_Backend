@@ -28,7 +28,8 @@ export const createCaja = async (req, res) => {
       CodigoCaja: req.body.CodigoCaja,
       CodigoRestaurante: req.body.CodigoRestaurante,
       CodigoEmpleado: req.body.CodigoEmpleado,
-      Usuario: req.body.Usuario
+      Descripcion: req.body.Descripcion,
+      EntradaDeDinero: req.body.EntradaDeDinero
   })
   try {
       const dataToSave = await data.save();
