@@ -3,24 +3,12 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const PaisSchema = new Schema({
-CodigoEspecial: {
+CodigoPais: {
 type: Number
   },
-PrecioPlatillo: {
-type: Number
-  },
-CodigoMedida: {
-type: Number
-  },
-NombrePlatillo: {
+NombrePais: {
 type: String
-  },
-IngredientePlatillo: {
-type: String
-  },
-DescripcionPlatillo: {
-type: String
-  },
+  }
 
 })
 
