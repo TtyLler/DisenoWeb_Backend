@@ -26,9 +26,9 @@ export const getOneLimpieza = async (req, res) => {
 export const createLimpieza = async (req, res) => {
   const data = new Limpieza({
       CodigoLimpieza: req.body.CodigoLimpieza,
-      DescripcionLimpieza: req.body.DescripcionLimpieza,
-      CodigoRestaurante: req.body.CodigoRestaurante,
-      CantidadLimpieza: req.body.CantidadLimpieza
+      NombreLimpieza: req.body.NombreLimpieza,
+      CantidadLimp: req.body.CantidadLimp,
+      RestauranteLimp: req.body.RestauranteLimp
   })
   try {
       const dataToSave = await data.save();

@@ -23,12 +23,12 @@ export const getOneProveedor = async (req, res) => {
 
 export const createProveedor = async (req, res) => {
   const data = new Proveedor({
-    CodigoProveedor: req.body.CodigoProveedor,
-    NombreProveedor: req.body.NombreProveedor,
-    CodigoActivo: req.body.CodigoActivo,
-    CodigoPais: req.body.CodigoPais,
-    CodigoRestaurante: req.body.CodigoRestaurante,
-    Telefono: req.body.Telefono,
+    CodigoProv: req.body.CodigoProv,
+    NombreProv: req.body.NombreProv,
+    ApellidoProv: req.body.ApellidoProv,
+    TelefonoProv: req.body.TelefonoProv,
+    CelularProv: req.body.CelularProv,
+
   })
   try {
     const dataToSave = await data.save()

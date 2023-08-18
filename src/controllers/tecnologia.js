@@ -27,12 +27,12 @@ export const getOneTecnologia= async (req, res) => {
 //creates a new record in a database using the data provide in the request body.
 export const createTecnologia = async (req, res) => {
   const data = new Tecnologias({
-      CodigoTecnologia: req.body.CodigoTecnologia,
-      NombreTecnologia: req.body.NombreTecnologia,
-      CodigoRestaurante: req.body.CodigoRestaurante,
-      CodigoMarca: req.body.CodigoMarca,
-      DescripcionTecnologia: req.body.DescripcionTecnologia,
-      CodigoProveedor: req.body.CodigoProveedor
+    CodigoTec: req.body.CodigoTec,
+    RestauranteTec: req.body.RestauranteTec,
+    NombreTec: req.body.NombreTec,
+    MarcaTec: req.body.MarcaTec,
+    CantidadTec: req.body.CantidadTec,
+    DescripcionTec: req.body.DescripcionTec
   })
   try {
       const dataToSave = await data.save();
