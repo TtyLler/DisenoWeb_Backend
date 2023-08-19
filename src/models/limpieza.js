@@ -6,13 +6,13 @@ const LimpiezaSchema = new Schema({
 CodigoLimpieza: {
 type: Number
   },
-DescripcionLimpieza: {
+  NombreLimpieza: {
 type: String
   },
-CodigoRestaurante: {
+  CantidadLimp: {
 type: Number
   },
-CantidadLimpieza: {
+  RestauranteLimp: {
 type: Number
   },
 
