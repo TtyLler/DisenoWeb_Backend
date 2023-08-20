@@ -23,6 +23,7 @@ import transaccion from '../routes/transaccion.js';
 import usuario from '../routes/usuario.js';
 import signup from '../routes/signup.js'
 import signin from '../routes/signin.js'
+import bitacora from '../routes/bitacora.js'
 
 // Export all the routes in a single array
 export default [
@@ -49,5 +50,6 @@ export default [
   transaccion,
   usuario,
   signup,
-  signin
+  signin,
+  bitacora
 ];
