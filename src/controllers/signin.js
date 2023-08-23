@@ -13,5 +13,5 @@ export const signInUsuario = async (req, res) => {
 
   const token = jwt.sign({id: user._id}, process.env.SECRET_WORD)
 
-  return res.status(200).json({token, Rol: user.Rol, NombreUsuario: user.NombreUsuario})
+  return res.status(200).json({token, Rol: user.Rol, NombreUsuario: user.NombreUsuario, Nombre: user.Nombre})
 }
