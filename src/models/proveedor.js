@@ -3,19 +3,19 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const ProveedorSchema = new Schema({
-CodigoProveedor: {
+CodigoProv: {
 type: Number
  },
-NombreProveedor: {
+NombreProv: {
 type: String
  },
-CodigoActivo: {
+ ApellidoProv: {
 type: Number
  },
-CodigoPais: {
+ TelefonoProv: {
 type: Number
  },
-Telefono: {
+ CelularProv: {
 type: Number
  },
 })
