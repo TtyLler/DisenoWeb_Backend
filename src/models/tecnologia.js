@@ -11,7 +11,7 @@ const TecnologiaSchema = new Schema({
       type: String
     },
     NombreTec: {
-      type: Number
+      type: String
     },
     MarcaTec: {
       type: Number

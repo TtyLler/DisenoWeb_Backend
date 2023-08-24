@@ -19,10 +19,13 @@ import platillo from '../routes/platillo.js';
 import producto from '../routes/producto.js';
 import proveedor from '../routes/proveedor.js';
 import rol from '../routes/rol.js';
+import cart from '../routes/cart.js';
 import transaccion from '../routes/transaccion.js';
 import usuario from '../routes/usuario.js';
-import signup from '../routes/signup.js'
-import signin from '../routes/signin.js'
+import signup from '../routes/signup.js';
+import signin from '../routes/signin.js';
+import food from '../routes/food.js';
+
 
 // Export all the routes in a single array
 export default [
@@ -49,5 +52,7 @@ export default [
   transaccion,
   usuario,
   signup,
-  signin
+  signin,
+  cart,
+  food
 ];
