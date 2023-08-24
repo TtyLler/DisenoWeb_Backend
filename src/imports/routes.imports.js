@@ -10,6 +10,7 @@ import cliente from '../routes/cliente.js';
 import comestible from '../routes/comestible.js';
 import empleado from '../routes/empleado.js';
 import especial from '../routes/especial.js';
+import factura from '../routes/factura.js';
 import limpieza from '../routes/limpieza.js';
 import marca from '../routes/marca.js';
 import medida from '../routes/medida.js';
@@ -26,6 +27,10 @@ import signup from '../routes/signup.js';
 import signin from '../routes/signin.js';
 import food from '../routes/food.js';
 
+import signup from '../routes/signup.js'
+import signin from '../routes/signin.js'
+import bitacora from '../routes/bitacora.js'
+import reserva from '../routes/reserva.js'
 
 // Export all the routes in a single array
 export default [
@@ -40,6 +45,7 @@ export default [
   comestible,
   empleado,
   especial,
+  factura,
   limpieza,
   marca,
   medida,
@@ -54,5 +60,7 @@ export default [
   signup,
   signin,
   cart,
-  food
+  food,
+  bitacora,
+  reserva
 ];

@@ -6,6 +6,9 @@ const UsuarioSchema = new Schema({
   CodigoUsuario: {
     type: Number,
   },
+  Nombre: {
+    type: String
+  },
   NombreUsuario: {
     type: String
   },

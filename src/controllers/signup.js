@@ -9,6 +9,7 @@ export const signUpUsuario = async (req, res) => {
   
   const data = new Usuario({
     CodigoUsuario: lastUsuario[0]['CodigoUsuario'] + 1,
+    Nombre: req.body.Nombre,
     NombreUsuario: req.body.NombreUsuario,
     Contrasena: req.body.Contrasena,
     Rol: 'Cliente'
