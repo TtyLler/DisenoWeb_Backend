@@ -26,9 +26,6 @@ import usuario from '../routes/usuario.js';
 import signup from '../routes/signup.js';
 import signin from '../routes/signin.js';
 import food from '../routes/food.js';
-
-import signup from '../routes/signup.js'
-import signin from '../routes/signin.js'
 import bitacora from '../routes/bitacora.js'
 import reserva from '../routes/reserva.js'
 
