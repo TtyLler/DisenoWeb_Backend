@@ -5,6 +5,12 @@ const Factura = mongoose.model('facturas', FacturaSchema)
 
 export const getFactura= async (req, res) => {
   try{
+      const data2 = await Factura.find({
+        FechaHoraFactura: {
+          $gte: new Date().toJSON().slice(0, 10), 
+          $lt: new Date(Date.now())
+        }
+      })
       const data = await Factura.find();
       res.json(data)
   }
@@ -65,5 +71,20 @@ export const deleteFactura= async (req, res) => {
   }
   catch (error) {
       res.status(400).json({ message: error.message })
+  }
+}
+
+export const getTodayFacturas= async (req, res) => {
+  try{
+      const data = await Factura.find({
+        FechaHoraFactura: {
+          $gte: new Date().toJSON().slice(0, 10), 
+          $lt: new Date(Date.now())
+        }
+      })
+      res.json(data)
+  }
+  catch(error){
+      res.status(500).json({message: error.message})
   }
 }
